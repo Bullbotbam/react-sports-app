@@ -1,4 +1,6 @@
 const express = require('express');
+const app = express();
+const PORT = 3001;
 
 const http = require('http');
 const socketIO = require('socket.io');
@@ -9,8 +11,6 @@ const io = socketIO(server);
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/users');
 
-const app = express();
-const PORT = 3001;
 
 // Socket connection
 io.on('connection', (socket) => {
